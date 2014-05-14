@@ -1,0 +1,493 @@
+  :dbid := dbms_swrf_internal.get_awr_dbid;
+           *
+ERROR at line 2:
+ORA-06550: line 2, column 12: 
+PLS-00201: identifier 'DBMS_SWRF_INTERNAL.GET_AWR_DBID' must be declared 
+ORA-06550: line 2, column 3: 
+PL/SQL: Statement ignored 
+
+
+~~~~~~~~~~~~~~~
+AWR INFO Report
+~~~~~~~~~~~~~~~
+
+Report generated at                                                                                           
+18:01:20 on Aug 20, 2012 ( Monday ) in Timezone +10:00                                                        
+                                                                                                              
+select 'Parameter ' || n.ksppinm || ' set to ' || v.ksppstdvl nonstd_params
+                                                  *
+ERROR at line 1:
+ORA-00904: "V"."KSPPSTDVL": invalid identifier 
+
+
+from    wrm$_wr_control w
+        *
+ERROR at line 3:
+ORA-00942: table or view does not exist 
+
+
+        from   x$kewam m)
+               *
+ERROR at line 8:
+ORA-00942: table or view does not exist 
+
+
+from   x$kewam m
+       *
+ERROR at line 5:
+ORA-00942: table or view does not exist 
+
+
+
+       wrm$_database_instance wdi
+       *
+ERROR at line 15:
+ORA-00942: table or view does not exist 
+
+
+
+########################################################
+(I) AWR Snapshots Information
+########################################################
+
+*****************************************************
+(1a) SYSAUX usage - Schema breakdown (dba_segments)
+*****************************************************
+|                                                                                                             
+| Total SYSAUX size                      1,088.3 MB ( 54% of 1,999.0 MB MAX with AUTOEXTEND OFF )             
+|                                                                                                             
+| Schema  SYS          occupies            994.9 MB (  91.4% )                                                
+| Schema  SYSTEM       occupies             93.1 MB (   8.6% )                                                
+| Schema  APPQOSSYS    occupies              0.3 MB (   0.0% )                                                
+|                                                                                                             
+********************************************************                                                      
+(1b) SYSAUX occupants space usage (v$sysaux_occupants)                                                        
+********************************************************                                                      
+|                                                                                                             
+| Occupant Name        Schema Name               Space Usage                                                  
+| -------------------- -------------------- ----------------                                                  
+| SM/AWR               SYS                          431.7 MB                                                  
+| SM/ADVISOR           SYS                          276.3 MB                                                  
+| SM/OPTSTAT           SYS                          251.1 MB                                                  
+| LOGMNR               SYSTEM                        91.6 MB                                                  
+| SM/OTHER             SYS                            9.2 MB                                                  
+| SMON_SCN_TIME        SYS                            3.3 MB                                                  
+| SQL_MANAGEMENT_BASE  SYS                            1.7 MB                                                  
+| PL/SCOPE             SYS                            1.6 MB                                                  
+| AO                   SYS                            1.4 MB                                                  
+| LOGSTDBY             SYSTEM                         1.4 MB                                                  
+| XSOQHIST             SYS                            1.4 MB                                                  
+| JOB_SCHEDULER        SYS                            1.3 MB                                                  
+| STREAMS              SYS                            1.0 MB                                                  
+| AUTO_TASK            SYS                            0.3 MB                                                  
+| AUDIT_TABLES         SYS                            0.0 MB                                                  
+| EM                   SYSMAN                         0.0 MB                                                  
+| EM_MONITORING_USER   DBSNMP                         0.0 MB                                                  
+| EXPRESSION_FILTER    EXFSYS                         0.0 MB                                                  
+| ORDIM                ORDSYS                         0.0 MB                                                  
+| ORDIM/ORDDATA        ORDDATA                        0.0 MB                                                  
+| ORDIM/ORDPLUGINS     ORDPLUGINS                     0.0 MB                                                  
+| ORDIM/SI_INFORMTN_SC SI_INFORMTN_SCHEMA             0.0 MB                                                  
+| SDO                  MDSYS                          0.0 MB                                                  
+| STATSPACK            PERFSTAT                       0.0 MB                                                  
+| TEXT                 CTXSYS                         0.0 MB                                                  
+| TSM                  TSMSYS                         0.0 MB                                                  
+| ULTRASEARCH          WKSYS                          0.0 MB                                                  
+| ULTRASEARCH_DEMO_USE WK_TEST                        0.0 MB                                                  
+| WM                   WMSYS                          0.0 MB                                                  
+| XDB                  XDB                            0.0 MB                                                  
+| XSAMD                OLAPSYS                        0.0 MB                                                  
+|                                                                                                             
+| Others (Unaccounted space)                         15.2 MB                                                  
+|                                                                                                             
+
+******************************************
+(1c) SYSAUX usage - Unregistered Schemas
+******************************************
+
+| This section displays schemas that are not registered                                                       
+| in V$SYSAUX_OCCUPANTS                                                                                       
+|                                                                                                             
+| Schema  APPQOSSYS    occupies              0.3 MB                                                           
+|                                                                                                             
+| Total space                                0.3 MB                                                           
+|                                                                                                             
+                                                                                                              
+*************************************************************
+(1d) SYSAUX usage - Unaccounted space in registered schemas
+*************************************************************
+|
+| This section displays unaccounted space in the registered
+| schemas of V$SYSAUX_OCCUPANTS.
+|                                                                                                             
+| Unaccounted space in SYS/SYSTEM           14.9 MB                                                           
+|                                                                                                             
+| Total space                               14.9 MB                                                           
+|                                                                                                             
+          from   wrm$_snapshot s
+                 *
+ERROR at line 12:
+ORA-06550: line 12, column 18: 
+PL/SQL: ORA-00942: table or view does not exist 
+ORA-06550: line 3, column 3: 
+PL/SQL: SQL Statement ignored 
+ORA-06550: line 16, column 10: 
+PL/SQL: ORA-00942: table or view does not exist 
+ORA-06550: line 15, column 3: 
+PL/SQL: SQL Statement ignored 
+ORA-06550: line 23, column 10: 
+PL/SQL: ORA-00942: table or view does not exist 
+ORA-06550: line 21, column 3: 
+PL/SQL: SQL Statement ignored 
+
+
+
+**********************************
+(3a) Space usage by AWR components (per database)
+**********************************
+
+COMPONENT        MB  % AWR  KB_PER_SNAP MB_PER_DAY MB_PER_WEEK TABLE% : INDEX%                                
+--------- --------- ------ ------------ ---------- ----------- ----------------                               
+FIXED         129.8   30.1                                        54% : 46%                                   
+ASH            81.0   18.8                                        89% : 11%                                   
+EVENTS         49.5   11.5                                        53% : 47%                                   
+SQLPLAN        47.0   10.9                                        68% : 32%                                   
+SPACE          18.6    4.3                                        66% : 34%                                   
+SQL            12.6    2.9                                        64% : 36%                                   
+SQLBIND         8.0    1.9                                        50% : 50%                                   
+SQLTEXT         3.2    0.7                                        94% : 6%                                    
+RAC             0.6    0.1                                        50% : 50%                                   
+
+**********************************
+(3b) Space usage within AWR Components (> 500K)
+**********************************
+
+COMPONENT        MB SEGMENT_NAME - % SPACE_USED                                           SEGMENT_TYPE        
+--------- --------- --------------------------------------------------------------------- ---------------     
+FIXED          16.0 WRH$_SYSMETRIC_HISTORY                                        -%      TABLE               
+FIXED          12.0 WRH$_SYSMETRIC_HISTORY_INDEX                                  -%      INDEX               
+FIXED           7.0 WRM$_SNAPSHOT_DETAILS_INDEX                                   -%      INDEX               
+FIXED           6.0 WRM$_SNAPSHOT_DETAILS                                         -%      TABLE               
+FIXED           3.0 WRH$_RSRC_CONSUMER_GROUP                                      -%      TABLE               
+FIXED           3.0 WRH$_SYSMETRIC_SUMMARY                                        -%      TABLE               
+FIXED           2.0 WRH$_RSRC_CONSUMER_GROUP_PK                                   -%      INDEX               
+FIXED           2.0 WRH$_SYSMETRIC_SUMMARY_INDEX                                  -%      INDEX               
+FIXED           2.0 WRH$_WAITCLASSMETRIC_HISTORY                                  -%      TABLE               
+FIXED           2.0 WRH$_WAITCLASSMETRIC_HIST_IND                                 -%      INDEX               
+FIXED           0.8 WRH$_LATCH.WRH$_LATCH_2389469514_1441                         -%      TABLE PARTITION     
+FIXED           0.8 WRH$_LATCH.WRH$_LATCH_2389469514_1417                         -%      TABLE PARTITION     
+FIXED           0.8 WRH$_LATCH.WRH$_LATCH_2389469514_1393                         -%      TABLE PARTITION     
+FIXED           0.8 WRH$_LATCH.WRH$_LATCH_2389469514_1369                         -%      TABLE PARTITION     
+FIXED           0.8 WRH$_LATCH.WRH$_LATCH_2389469514_1465                         -%      TABLE PARTITION     
+FIXED           0.8 WRH$_LATCH.WRH$_LATCH_2389469514_1561                         -%      TABLE PARTITION     
+FIXED           0.8 WRH$_LATCH.WRH$_LATCH_2389469514_1537                         -%      TABLE PARTITION     
+FIXED           0.8 WRH$_LATCH.WRH$_LATCH_2389469514_1513                         -%      TABLE PARTITION     
+FIXED           0.8 WRH$_LATCH.WRH$_LATCH_2389469514_1489                         -%      TABLE PARTITION     
+FIXED           0.6 WRH$_TS_SPACE_USAGE_IND                                       -%      INDEX               
+FIXED           0.6 WRH$_MUTEX_SLEEP                                              -%      TABLE               
+FIXED           0.6 WRH$_LATCH_MISSES_SUMMARY.WRH$_LATCH__2389469514_1393         -%      TABLE PARTITION     
+FIXED           0.6 WRH$_LATCH_MISSES_SUMMARY.WRH$_LATCH__2389469514_1537         -%      TABLE PARTITION     
+FIXED           0.6 WRH$_LATCH_MISSES_SUMMARY.WRH$_LATCH__2389469514_1513         -%      TABLE PARTITION     
+FIXED           0.6 WRH$_LATCH_MISSES_SUMMARY.WRH$_LATCH__2389469514_1489         -%      TABLE PARTITION     
+FIXED           0.6 WRH$_LATCH_MISSES_SUMMARY.WRH$_LATCH__2389469514_1465         -%      TABLE PARTITION     
+FIXED           0.6 WRH$_LATCH_MISSES_SUMMARY.WRH$_LATCH__2389469514_1441         -%      TABLE PARTITION     
+FIXED           0.6 WRH$_LATCH_MISSES_SUMMARY.WRH$_LATCH__2389469514_1369         -%      TABLE PARTITION     
+FIXED           0.6 WRH$_LATCH.WRH$_LATCH_2389469514_1585                         -%      TABLE PARTITION     
+FIXED           0.6 WRH$_LATCH_MISSES_SUMMARY.WRH$_LATCH__2389469514_1417         -%      TABLE PARTITION     
+ASH            13.0 WRH$_ACTIVE_SESSION_HISTORY.WRH$_ACTIVE_2389469514_1441       -%      TABLE PARTITION     
+ASH            12.0 WRH$_ACTIVE_SESSION_HISTORY.WRH$_ACTIVE_2389469514_1465       -%      TABLE PARTITION     
+ASH             9.0 WRH$_ACTIVE_SESSION_HISTORY.WRH$_ACTIVE_2389469514_1417       -%      TABLE PARTITION     
+ASH             8.0 WRH$_ACTIVE_SESSION_HISTORY.WRH$_ACTIVE_2389469514_1489       -%      TABLE PARTITION     
+ASH             7.0 WRH$_ACTIVE_SESSION_HISTORY.WRH$_ACTIVE_2389469514_1513       -%      TABLE PARTITION     
+ASH             5.0 WRH$_ACTIVE_SESSION_HISTORY.WRH$_ACTIVE_2389469514_1585       -%      TABLE PARTITION     
+ASH             5.0 WRH$_ACTIVE_SESSION_HISTORY.WRH$_ACTIVE_2389469514_1537       -%      TABLE PARTITION     
+ASH             5.0 WRH$_ACTIVE_SESSION_HISTORY.WRH$_ACTIVE_2389469514_1561       -%      TABLE PARTITION     
+ASH             4.0 WRH$_ACTIVE_SESSION_HISTORY.WRH$_ACTIVE_2389469514_1393       -%      TABLE PARTITION     
+ASH             4.0 WRH$_ACTIVE_SESSION_HISTORY.WRH$_ACTIVE_2389469514_1369       -%      TABLE PARTITION     
+ASH             2.0 WRH$_ACTIVE_SESSION_HISTORY_PK.WRH$_ACTIVE_2389469514_1465    -%      INDEX PARTITION     
+ASH             2.0 WRH$_ACTIVE_SESSION_HISTORY_PK.WRH$_ACTIVE_2389469514_1441    -%      INDEX PARTITION     
+ASH             0.9 WRH$_ACTIVE_SESSION_HISTORY_PK.WRH$_ACTIVE_2389469514_1417    -%      INDEX PARTITION     
+ASH             0.8 WRH$_ACTIVE_SESSION_HISTORY_PK.WRH$_ACTIVE_2389469514_1489    -%      INDEX PARTITION     
+ASH             0.8 WRH$_ACTIVE_SESSION_HISTORY_PK.WRH$_ACTIVE_2389469514_1513    -%      INDEX PARTITION     
+ASH             0.5 WRH$_ACTIVE_SESSION_HISTORY_PK.WRH$_ACTIVE_2389469514_1537    -%      INDEX PARTITION     
+ASH             0.5 WRH$_ACTIVE_SESSION_HISTORY_PK.WRH$_ACTIVE_2389469514_1561    -%      INDEX PARTITION     
+
+COMPONENT        MB SEGMENT_NAME - % SPACE_USED                                           SEGMENT_TYPE        
+--------- --------- --------------------------------------------------------------------- ---------------     
+ASH             0.5 WRH$_ACTIVE_SESSION_HISTORY_PK.WRH$_ACTIVE_2389469514_1585    -%      INDEX PARTITION     
+EVENTS          2.0 WRH$_EVENT_HISTOGRAM.WRH$_EVENT__2389469514_1561              -%      TABLE PARTITION     
+EVENTS          2.0 WRH$_EVENT_HISTOGRAM.WRH$_EVENT__2389469514_1537              -%      TABLE PARTITION     
+EVENTS          2.0 WRH$_EVENT_HISTOGRAM.WRH$_EVENT__2389469514_1513              -%      TABLE PARTITION     
+EVENTS          2.0 WRH$_EVENT_HISTOGRAM.WRH$_EVENT__2389469514_1489              -%      TABLE PARTITION     
+EVENTS          2.0 WRH$_EVENT_HISTOGRAM.WRH$_EVENT__2389469514_1465              -%      TABLE PARTITION     
+EVENTS          2.0 WRH$_EVENT_HISTOGRAM.WRH$_EVENT__2389469514_1441              -%      TABLE PARTITION     
+EVENTS          2.0 WRH$_EVENT_HISTOGRAM.WRH$_EVENT__2389469514_1417              -%      TABLE PARTITION     
+EVENTS          2.0 WRH$_EVENT_HISTOGRAM.WRH$_EVENT__2389469514_1393              -%      TABLE PARTITION     
+EVENTS          2.0 WRH$_EVENT_HISTOGRAM.WRH$_EVENT__2389469514_1369              -%      TABLE PARTITION     
+EVENTS          2.0 WRH$_ENQUEUE_STAT                                             -%      TABLE               
+EVENTS          2.0 WRH$_BG_EVENT_SUMMARY                                         -%      TABLE               
+EVENTS          2.0 WRH$_EVENT_HISTOGRAM_PK.WRH$_EVENT__2389469514_1369           -%      INDEX PARTITION     
+EVENTS          2.0 WRH$_EVENT_HISTOGRAM_PK.WRH$_EVENT__2389469514_1561           -%      INDEX PARTITION     
+EVENTS          2.0 WRH$_EVENT_HISTOGRAM_PK.WRH$_EVENT__2389469514_1537           -%      INDEX PARTITION     
+EVENTS          2.0 WRH$_EVENT_HISTOGRAM_PK.WRH$_EVENT__2389469514_1513           -%      INDEX PARTITION     
+EVENTS          2.0 WRH$_EVENT_HISTOGRAM_PK.WRH$_EVENT__2389469514_1489           -%      INDEX PARTITION     
+EVENTS          2.0 WRH$_EVENT_HISTOGRAM_PK.WRH$_EVENT__2389469514_1465           -%      INDEX PARTITION     
+EVENTS          2.0 WRH$_EVENT_HISTOGRAM_PK.WRH$_EVENT__2389469514_1441           -%      INDEX PARTITION     
+EVENTS          2.0 WRH$_EVENT_HISTOGRAM_PK.WRH$_EVENT__2389469514_1417           -%      INDEX PARTITION     
+EVENTS          2.0 WRH$_EVENT_HISTOGRAM_PK.WRH$_EVENT__2389469514_1393           -%      INDEX PARTITION     
+EVENTS          1.0 WRH$_ENQUEUE_STAT_PK                                          -%      INDEX               
+EVENTS          0.9 WRH$_BG_EVENT_SUMMARY_PK                                      -%      INDEX               
+EVENTS          0.9 WRH$_EVENT_HISTOGRAM.WRH$_EVENT__2389469514_1585              -%      TABLE PARTITION     
+EVENTS          0.9 WRH$_EVENT_HISTOGRAM_PK.WRH$_EVENT__2389469514_1585           -%      INDEX PARTITION     
+SQLPLAN        32.0 WRH$_SQL_PLAN                                                 -%      TABLE               
+SQLPLAN        15.0 WRH$_SQL_PLAN_PK                                              -%      INDEX               
+SPACE           2.0 WRH$_TABLESPACE_SPACE_USAGE                                   -%      TABLE               
+SQL             0.9 WRH$_SQLSTAT.WRH$_SQLSTA_2389469514_1441                      -%      TABLE PARTITION     
+SQL             0.8 WRH$_SQLSTAT.WRH$_SQLSTA_2389469514_1489                      -%      TABLE PARTITION     
+SQL             0.8 WRH$_SQLSTAT.WRH$_SQLSTA_2389469514_1417                      -%      TABLE PARTITION     
+SQL             0.8 WRH$_SQLSTAT.WRH$_SQLSTA_2389469514_1465                      -%      TABLE PARTITION     
+SQL             0.8 WRH$_SQLSTAT.WRH$_SQLSTA_2389469514_1537                      -%      TABLE PARTITION     
+SQL             0.8 WRH$_SQLSTAT.WRH$_SQLSTA_2389469514_1513                      -%      TABLE PARTITION     
+SQL             0.7 WRH$_SQLSTAT.WRH$_SQLSTA_2389469514_1561                      -%      TABLE PARTITION     
+SQL             0.7 WRH$_SQLSTAT.WRH$_SQLSTA_2389469514_1369                      -%      TABLE PARTITION     
+SQL             0.6 WRH$_SQLSTAT.WRH$_SQLSTA_2389469514_1393                      -%      TABLE PARTITION     
+SQL             0.5 WRH$_SQLSTAT.WRH$_SQLSTA_2389469514_1585                      -%      TABLE PARTITION     
+SQLBIND         4.0 WRH$_SQL_BIND_METADATA_PK                                     -%      INDEX               
+SQLBIND         4.0 WRH$_SQL_BIND_METADATA                                        -%      TABLE               
+SQLTEXT         3.0 WRH$_SQLTEXT                                                  -%      TABLE               
+
+**********************************
+(4) Space usage by non-AWR components (> 500K)
+**********************************
+
+COMPONENT        MB SEGMENT_NAME                                                          SEGMENT_TYPE        
+--------- --------- --------------------------------------------------------------------- ---------------     
+NON_AWR       152.0 SYS.WRI$_ADV_SQLT_PLANS                                               TABLE               
+NON_AWR        88.0 SYS.I_WRI$_OPTSTAT_H_OBJ#_ICOL#_ST                                    INDEX               
+NON_AWR        58.0 SYS.WRI$_OPTSTAT_HISTGRM_HISTORY                                      TABLE               
+NON_AWR        47.0 SYS.SYS_LOB0000320423C00038$$                                         LOBSEGMENT          
+NON_AWR        38.0 SYS.I_WRI$_OPTSTAT_H_ST                                               INDEX               
+NON_AWR        34.0 SYS.SYS_LOB0000320415C00004$$                                         LOBSEGMENT          
+NON_AWR        32.0 SYS.SYS_LOB0000320024C00040$$                                         LOBSEGMENT          
+NON_AWR        22.0 SYS.WRI$_ADV_RATIONALE                                                TABLE               
+NON_AWR        20.0 SYS.WRI$_OPTSTAT_HISTHEAD_HISTORY                                     TABLE               
+NON_AWR        20.0 SYS.I_WRI$_OPTSTAT_HH_OBJ_ICOL_ST                                     INDEX               
+NON_AWR        10.0 SYS.WRI$_ADV_OBJECTS                                                  TABLE               
+NON_AWR        10.0 SYS.I_WRI$_OPTSTAT_HH_ST                                              INDEX               
+NON_AWR         8.0 SYSTEM.LOGMNR_SEED$.P_LESSTHAN100                                     TABLE PARTITION     
+NON_AWR         8.0 SYSTEM.LOGMNR_PARTOBJ$.P_LESSTHAN100                                  TABLE PARTITION     
+NON_AWR         8.0 SYSTEM.LOGMNR_REFCON$.P_LESSTHAN100                                   TABLE PARTITION     
+NON_AWR         8.0 SYSTEM.LOGMNR_ENC$.P_LESSTHAN100                                      TABLE PARTITION     
+NON_AWR         8.0 SYSTEM.LOGMNR_PROPS$.P_LESSTHAN100                                    TABLE PARTITION     
+NON_AWR         8.0 SYSTEM.LOGMNR_KOPM$.P_LESSTHAN100                                     TABLE PARTITION     
+NON_AWR         8.0 SYSTEM.LOGMNR_SUBCOLTYPE$.P_LESSTHAN100                               TABLE PARTITION     
+NON_AWR         8.0 SYSTEM.LOGMNR_OPQTYPE$.P_LESSTHAN100                                  TABLE PARTITION     
+NON_AWR         8.0 SYSTEM.LOGMNR_NTAB$.P_LESSTHAN100                                     TABLE PARTITION     
+NON_AWR         8.0 SYSTEM.LOGMNR_LOGMNR_BUILDLOG.P_LESSTHAN100                           TABLE PARTITION     
+NON_AWR         7.0 SYS.WRI$_ADV_MESSAGE_GROUPS                                           TABLE               
+NON_AWR         6.0 SYS.WRI$_ADV_MSG_GRPS_IDX_01                                          INDEX               
+NON_AWR         4.0 SYS.WRI$_OPTSTAT_IND_HISTORY                                          TABLE               
+NON_AWR         4.0 SYSTEM.SYS_LOB0000318224C00009$$                                      LOBSEGMENT          
+NON_AWR         4.0 SYS.WRI$_ADV_SQLT_RTN_PLAN_PK                                         INDEX               
+NON_AWR         4.0 SYS.WRI$_ADV_MESSAGE_GROUPS_PK                                        INDEX               
+NON_AWR         3.0 SYS.WRI$_ADV_PARAMETERS                                               TABLE               
+NON_AWR         3.0 SYS.WRI$_ADV_SQLT_PLANS_PK                                            INDEX               
+NON_AWR         3.0 SYS.WRI$_ADV_RATIONALE_PK                                             INDEX               
+NON_AWR         3.0 SYS.WRI$_ADV_PARAMETERS_PK                                            INDEX               
+NON_AWR         3.0 SYS.I_WRI$_OPTSTAT_IND_OBJ#_ST                                        INDEX               
+NON_AWR         3.0 SYS.SMON_SCN_TO_TIME_AUX                                              CLUSTER             
+NON_AWR         3.0 SYS.WRI$_ADV_SQLT_PLAN_STATS                                          TABLE               
+NON_AWR         3.0 SYS.WRI$_ADV_ACTIONS                                                  TABLE               
+NON_AWR         2.0 SYS.WRI$_OPTSTAT_TAB_HISTORY                                          TABLE               
+NON_AWR         2.0 SYS.WRI$_ADV_OBJECTS_PK                                               INDEX               
+NON_AWR         2.0 SYS.WRI$_ADV_OBJECTS_IDX_01                                           INDEX               
+NON_AWR         2.0 SYS.I_WRI$_OPTSTAT_IND_ST                                             INDEX               
+NON_AWR         2.0 SYS.I_WRI$_OPTSTAT_TAB_OBJ#_ST                                        INDEX               
+NON_AWR         2.0 SYS.ALERT_QT                                                          TABLE               
+NON_AWR         2.0 SYS.WRI$_ADV_SQLT_RTN_PLAN                                            TABLE               
+NON_AWR         1.0 SYS.WRI$_ADV_FINDINGS                                                 TABLE               
+NON_AWR         1.0 SYS.SYS$SERVICE_METRICS_TAB                                           TABLE               
+NON_AWR         0.9 SYS.SYS_LOB0000319565C00005$$                                         LOBSEGMENT          
+NON_AWR         0.9 SYS.SYS_IOT_TOP_324600                                                INDEX               
+
+COMPONENT        MB SEGMENT_NAME                                                          SEGMENT_TYPE        
+--------- --------- --------------------------------------------------------------------- ---------------     
+NON_AWR         0.8 SYS.SCHEDULER$_EVENT_LOG                                              TABLE               
+NON_AWR         0.8 SYS.WRI$_ADV_SQLT_PLAN_HASH_01                                        INDEX               
+NON_AWR         0.8 SYS.WRI$_ADV_FINDINGS_IDX_02                                          INDEX               
+NON_AWR         0.8 SYS.WRI$_ADV_SQLT_PLAN_HASH_PK                                        INDEX               
+NON_AWR         0.7 SYS.WRI$_ADV_RECOMMENDATIONS                                          TABLE               
+NON_AWR         0.7 SYS.WRI$_ADV_FINDINGS_IDX_01                                          INDEX               
+NON_AWR         0.7 SYS.WRI$_ADV_SQLT_PLAN_HASH                                           TABLE               
+NON_AWR         0.6 SYS.WRI$_OPTSTAT_OPR                                                  TABLE               
+NON_AWR         0.6 SYS.WRI$_ADV_ADDM_FDG                                                 TABLE               
+NON_AWR         0.6 SYS.I_WRI$_OPTSTAT_TAB_ST                                             INDEX               
+NON_AWR         0.5 SYS.I_STATS_TARGET1                                                   INDEX               
+NON_AWR         0.5 SYS.WRI$_ADV_RECS_IDX_02                                              INDEX               
+
+**********************************
+(5a) AWR snapshots - last 50
+**********************************
+from wrm$_snapshot
+     *
+ERROR at line 2:
+ORA-00942: table or view does not exist 
+
+
+   from wrm$_snapshot)
+        *
+ERROR at line 7:
+ORA-00942: table or view does not exist 
+
+
+
+**********************************
+(5b) AWR snapshots with errors or invalid
+**********************************
+       from wrm$_snapshot sn, wrm$_snap_error err
+                              *
+ERROR at line 4:
+ORA-00942: table or view does not exist 
+
+
+
+**********************************
+(5c) AWR snapshots -- OLDEST Non-Baselined snapshots
+**********************************
+          from wrm$_snapshot s2
+               *
+ERROR at line 7:
+ORA-00942: table or view does not exist 
+
+
+
+**********************************
+(6) AWR Control Settings - interval, retention
+**********************************
+from   wrm$_wr_control
+       *
+ERROR at line 6:
+ORA-00942: table or view does not exist 
+
+
+
+**********************************
+(7a) AWR Contents - row counts for each snapshots
+**********************************
+        from wrh$_system_event  where dbid = :dbid
+             *
+ERROR at line 24:
+ORA-00942: table or view does not exist 
+
+
+
+**********************************
+(7b) AWR Contents - average row counts per snapshot
+**********************************
+                from wrh$_system_event  where dbid = :dbid
+                     *
+ERROR at line 27:
+ORA-00942: table or view does not exist 
+
+
+
+**********************************
+(7c) AWR total item counts - names, text, plans
+**********************************
+          from wrh$_seg_stat_obj  where dbid = :dbid) segob
+               *
+ERROR at line 15:
+ORA-00942: table or view does not exist 
+
+
+
+
+########################################################
+(II) Advisor Framework Info
+########################################################
+Warning: Using test settings.                                                                                 
+~~~~~~~  No rows will be selected in the following advisor framework sections.                                
+
+**********************************
+(1) Advisor Tasks - Last 50
+**********************************
+
+**********************************
+(2) Advisor Task - Oldest 5
+**********************************
+
+**********************************
+(3) Advisor Tasks With Errors - Last 50
+**********************************
+
+no rows selected
+
+
+
+########################################################
+(III) ASH Usage Info
+########################################################
+  from   wrm$_snapshot s
+         *
+ERROR at line 19:
+ORA-06550: line 19, column 10: 
+PL/SQL: ORA-00942: table or view does not exist 
+ORA-06550: line 17, column 3: 
+PL/SQL: SQL Statement ignored 
+ORA-06550: line 25, column 10: 
+PL/SQL: ORA-00942: table or view does not exist 
+ORA-06550: line 23, column 3: 
+PL/SQL: SQL Statement ignored 
+
+
+
+**********************************
+(1a) ASH histogram (past 3 days)
+**********************************
+        from   wrh$_active_session_history
+               *
+ERROR at line 4:
+ORA-00942: table or view does not exist 
+
+
+
+**********************************
+(1b) ASH histogram (past 1 day)
+**********************************
+        from   wrh$_active_session_history
+               *
+ERROR at line 4:
+ORA-00942: table or view does not exist 
+
+
+
+**********************************
+(2a) ASH details (past 3 days)
+**********************************
+        from   wrh$_active_session_history
+               *
+ERROR at line 7:
+ORA-00942: table or view does not exist 
+
+
+
+**********************************
+(2b) ASH details (past 1 day)
+**********************************
+        from   wrh$_active_session_history
+               *
+ERROR at line 7:
+ORA-00942: table or view does not exist 
+
+
+
+**********************************
+(2c) ASH sessions (Fg Vs Bg) (past 1 day across all instances in RAC)
+**********************************
+        from   wrh$_active_session_history
+               *
+ERROR at line 8:
+ORA-00942: table or view does not exist 
+
+
+End of Report
